@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import FeaturedProducts from "@/components/FeaturedProducts";
 import ProductCategories from "@/components/ProductCategories";
@@ -54,7 +54,7 @@ export default function Home() {
               </svg>
             </div>
           </div>
-          <div className="md:w-1/2 relative">
+          <div className="w-full md:w-1/2 relative">
             <div className="relative h-64 sm:h-80 md:h-96 w-full rounded-xl overflow-hidden shadow-xl bg-green-100 flex items-center justify-center">
               <span className="text-green-700 font-medium text-xl">儿童玩具展示图片</span>
               

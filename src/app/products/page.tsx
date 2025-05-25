@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 // 模拟产品数据
 const productsData = [
@@ -479,7 +479,6 @@ export default function ProductsPage() {
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">{product.name}</h3>
                     <p className="text-gray-600 text-sm mb-2">{product.description}</p>
-                    <p className="text-green-800 font-medium">¥{product.price}</p>
                   </div>
                 </Link>
               ))

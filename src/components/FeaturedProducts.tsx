@@ -1,14 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const products = [
   {
     id: 1,
     name: "彩虹积木套装",
     description: "30块彩色积木，适合3岁以上儿童",
-    price: 199,
     image: "/images/product-blocks.jpg",
     href: "/products/rainbow-blocks"
   },
@@ -16,7 +15,6 @@ const products = [
     id: 2,
     name: "智能机器人",
     description: "可编程智能机器人，培养编程思维",
-    price: 499,
     image: "/images/product-robot.jpg",
     href: "/products/smart-robot"
   },
@@ -24,7 +22,6 @@ const products = [
     id: 3,
     name: "毛绒恐龙",
     description: "柔软舒适的毛绒恐龙玩具",
-    price: 129,
     image: "/images/product-dinosaur.jpg",
     href: "/products/plush-dinosaur"
   },
@@ -32,7 +29,6 @@ const products = [
     id: 4,
     name: "遥控赛车",
     description: "高速遥控赛车，多种操控模式",
-    price: 299,
     image: "/images/product-car.jpg",
     href: "/products/remote-car"
   }
@@ -63,7 +59,6 @@ const FeaturedProducts = () => {
           <div className="p-4">
             <h3 className="text-lg font-semibold text-gray-900 mb-1">{product.name}</h3>
             <p className="text-gray-600 text-sm mb-2">{product.description}</p>
-            <p className="text-green-800 font-medium">¥{product.price}</p>
           </div>
         </Link>
       ))}

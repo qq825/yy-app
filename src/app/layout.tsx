@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "优优玩具 - 专业玩具销售企业",
-  description: "优优玩具企业官方网站，提供各类高质量玩具产品",
+  title: "YYBB玩具 - 专业玩具销售企业",
+  description: "YYBB玩具企业官方网站，提供各类高质量玩具产品",
 };
 
 export default function RootLayout({

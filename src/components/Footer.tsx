@@ -7,9 +7,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* 公司简介 */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">优优玩具</h3>
+            <h3 className="text-lg font-semibold mb-4">YYBB</h3>
             <p className="text-gray-300 text-sm">
-              优优玩具是一家专业的玩具销售企业，致力于为孩子们提供安全、有趣、教育性的玩具产品。
+              YYBB是一家专业的玩具销售企业，致力于为孩子们提供安全、有趣、教育性的玩具产品。
             </p>
           </div>
           

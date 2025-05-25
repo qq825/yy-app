@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const testimonials = [
   {
@@ -68,11 +68,11 @@ const Testimonials = () => {
               </svg>
             </div>
           </div>
-          <p className="text-gray-700 italic">"{testimonial.content}"</p>
+          <p className="text-gray-700 italic">&quot;{testimonial.content}&quot;</p>
         </div>
       ))}
     </div>
   );
 };
 
-export default Testimonials; 
+export default Testimonials;

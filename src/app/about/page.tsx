@@ -14,22 +14,21 @@ export default function AboutPage() {
       {/* 公司简介 */}
       <section className="mb-20">
         <div className="flex flex-col md:flex-row items-center gap-10">
-          <div className="md:w-1/2">
+          <div className="w-full md:w-1/2">
             <div className="relative h-64 sm:h-80 w-full rounded-xl overflow-hidden bg-blue-100 flex items-center justify-center">
               <span className="text-blue-500 font-medium">公司团队图片</span>
-              {/* 当有实际图片时可以使用下面的代码 */}
-              {/* <Image
+              <Image
                 src="/images/about-company.jpg"
                 alt="优优玩具团队"
                 fill
-                style={{objectFit: "cover"}}
-              /> */}
+                style={{ objectFit: "cover" }}
+              />
             </div>
           </div>
           <div className="md:w-1/2">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">公司简介</h2>
             <p className="text-gray-600 mb-4">
-              优优玩具成立于2010年，是一家专注于儿童玩具研发、生产和销售的企业。多年来，我们坚持"安全、创意、教育"的产品理念，致力于为0-12岁儿童提供优质、有趣、富有教育意义的玩具产品。
+              优优玩具成立于2010年，是一家专注于儿童玩具研发、生产和销售的企业。多年来，我们坚持&quot;安全、创意、教育&quot;的产品理念，致力于为0-12岁儿童提供优质、有趣、富有教育意义的玩具产品。
             </p>
             <p className="text-gray-600 mb-4">
               公司总部位于北京，在上海、广州和深圳设有分公司，产品销售网络覆盖全国各大中城市。我们与多家知名连锁玩具店、百货商场和电商平台建立了长期稳定的合作关系，产品深受消费者喜爱。

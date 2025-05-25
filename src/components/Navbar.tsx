@@ -2,10 +2,22 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  
+  const isActive = (path: string) => {
+    return pathname === path;
+  };
+
+  const navItems = [
+    { name: '首页', path: '/' },
+    { name: '产品中心', path: '/products' },
+    { name: '关于我们', path: '/about' },
+    { name: '联系方式', path: '/contact' },
+  ];
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -13,24 +25,39 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-green-800">Logo</span>
+              <span className="text-2xl font-bold text-green-800">YYBB</span>
             </Link>
           </div>
           
           {/* 桌面端导航菜单 */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-green-800 px-3 py-2 rounded-md font-medium">
-              首页
-            </Link>
-            <Link href="/products" className="text-gray-700 hover:text-green-800 px-3 py-2 rounded-md font-medium">
-              产品中心
-            </Link>
-            <Link href="/about" className="text-gray-700 hover:text-green-800 px-3 py-2 rounded-md font-medium">
-              关于我们
-            </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-green-800 px-3 py-2 rounded-md font-medium">
-              联系方式
-            </Link>
+          <div className="hidden md:flex items-center">
+            <div className="flex space-x-1">
+              {navItems.map((item) => (
+                <Link 
+                  key={item.path}
+                  href={item.path} 
+                  className={`px-4 py-2 rounded-md text-base font-medium transition-all duration-200 flex items-center ${
+                    isActive(item.path)
+                      ? 'bg-green-100 text-green-800 font-semibold'
+                      : 'text-gray-700 hover:bg-green-50 hover:text-green-700'
+                  }`}
+                >
+                  {item.name}
+                  {isActive(item.path) && (
+                    <div className="h-1 w-full bg-green-500 absolute bottom-0 left-0 rounded-t-md"></div>
+                  )}
+                </Link>
+              ))}
+            </div>
+          </div>
+          
+          {/* 右侧搜索按钮 */}
+          <div className="hidden md:flex items-center">
+            <button className="ml-4 p-2 rounded-full text-gray-600 hover:text-green-700 hover:bg-green-50 transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </button>
           </div>
           
           {/* 移动端菜单按钮 */}
@@ -65,22 +92,24 @@ const Navbar = () => {
       {/* 移动端菜单 */}
       <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
-          <Link href="/" className="block text-gray-700 hover:text-green-800 px-3 py-2 rounded-md font-medium">
-            首页
-          </Link>
-          <Link href="/products" className="block text-gray-700 hover:text-green-800 px-3 py-2 rounded-md font-medium">
-            产品中心
-          </Link>
-          <Link href="/about" className="block text-gray-700 hover:text-green-800 px-3 py-2 rounded-md font-medium">
-            关于我们
-          </Link>
-          <Link href="/contact" className="block text-gray-700 hover:text-green-800 px-3 py-2 rounded-md font-medium">
-            联系方式
-          </Link>
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              href={item.path}
+              className={`block px-3 py-2 rounded-md text-base font-medium ${
+                isActive(item.path)
+                  ? 'bg-green-100 text-green-800 font-semibold'
+                  : 'text-gray-700 hover:bg-green-50 hover:text-green-700'
+              }`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
       </div>
     </nav>
   );
 };
 
-export default Navbar; 
+export default Navbar;
