@@ -227,7 +227,7 @@ export default function ProductsPage() {
             onClick={() => setViewMode('products')}
             className={`px-4 py-2 text-sm font-medium rounded-l-lg ${
               viewMode === 'products'
-                ? 'bg-green-800 text-white'
+                ? 'bg-[#005550] text-white'
                 : 'bg-white text-gray-700 hover:bg-gray-50'
             }`}
           >
@@ -237,7 +237,7 @@ export default function ProductsPage() {
             onClick={() => setViewMode('categories')}
             className={`px-4 py-2 text-sm font-medium ${
               viewMode === 'categories'
-                ? 'bg-green-800 text-white'
+                ? 'bg-[#005550] text-white'
                 : 'bg-white text-gray-700 hover:bg-gray-50'
             }`}
           >
@@ -247,7 +247,7 @@ export default function ProductsPage() {
             onClick={() => setViewMode('ageGroups')}
             className={`px-4 py-2 text-sm font-medium rounded-r-lg ${
               viewMode === 'ageGroups'
-                ? 'bg-green-800 text-white'
+                ? 'bg-[#005550] text-white'
                 : 'bg-white text-gray-700 hover:bg-gray-50'
             }`}
           >

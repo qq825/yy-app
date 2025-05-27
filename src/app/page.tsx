@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* 英雄区域 */}
-      <section className="relative bg-green-50 overflow-hidden">
+      <section className="relative bg-[#f0f5f4] overflow-hidden">
         {/* 装饰性玩具元素 - 左上角 */}
         <div className="absolute -top-6 -left-6 w-24 h-24 rotate-12 opacity-20">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="text-green-800">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="text-[#005550]">
             <path d="M256 32C132.8 32 32 132.8 32 256s100.8 224 224 224 224-100.8 224-224S379.2 32 256 32zm0 400c-97 0-176-79-176-176S159 80 256 80s176 79 176 176-79 176-176 176z"/>
             <path d="M363.5 256c0 59.4-48.1 107.5-107.5 107.5S148.5 315.4 148.5 256 196.6 148.5 256 148.5 363.5 196.6 363.5 256z"/>
           </svg>
@@ -19,7 +19,7 @@ export default function Home() {
 
         {/* 装饰性玩具元素 - 右上角 */}
         <div className="absolute top-10 right-10 w-16 h-16 rotate-45 opacity-10">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="text-green-800">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="text-[#005550]">
             <path d="M453.1 120l-58.5-58.5c-12-12-28.3-18.7-45.3-18.7H162.7c-17 0-33.3 6.7-45.3 18.7L58.9 120c-25 25-25 65.5 0 90.5l58.5 58.5V388c0 48.6 39.4 88 88 88h160c48.6 0 88-39.4 88-88V269l58.5-58.5c25-25 25-65.5 0-90.5zm-41.4 49.1l-58.5 58.5v160c0 13.3-10.7 24-24 24h-160c-13.3 0-24-10.7-24-24v-160l-58.5-58.5c-6-6-6-15.8 0-21.8l58.5-58.5c3-3 7.1-4.7 11.3-4.7h186.3c4.3 0 8.3 1.7 11.3 4.7l58.5 58.5c6 6 6 15.8 0 21.8z"/>
           </svg>
         </div>
@@ -35,13 +35,13 @@ export default function Home() {
             <div className="flex flex-wrap gap-4">
               <Link 
                 href="/products" 
-                className="bg-green-800 hover:bg-green-900 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                className="bg-[#005550] hover:bg-[#004540] text-white font-medium py-3 px-6 rounded-lg transition-colors"
               >
                 浏览产品
               </Link>
               <Link 
                 href="/about" 
-                className="bg-white hover:bg-gray-100 text-green-800 font-medium py-3 px-6 rounded-lg border border-green-800 transition-colors"
+                className="bg-white hover:bg-gray-100 text-[#005550] font-medium py-3 px-6 rounded-lg border border-[#005550] transition-colors"
               >
                 了解我们
               </Link>
@@ -55,8 +55,8 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full md:w-1/2 relative">
-            <div className="relative h-64 sm:h-80 md:h-96 w-full rounded-xl overflow-hidden shadow-xl bg-green-100 flex items-center justify-center">
-              <span className="text-green-700 font-medium text-xl">儿童玩具展示图片</span>
+            <div className="relative h-64 sm:h-80 md:h-96 w-full rounded-xl overflow-hidden shadow-xl bg-[#e6efee] flex items-center justify-center">
+              <span className="text-[#005550] font-medium text-xl">儿童玩具展示图片</span>
               
               {/* 装饰性玩具元素 - 积木 */}
               <div className="absolute -bottom-5 -right-5 w-20 h-20 rotate-12 opacity-30">
@@ -89,28 +89,28 @@ export default function Home() {
       <section className="py-16 bg-white relative">
         {/* 装饰性玩具元素 - 拼图 */}
         <div className="absolute top-10 left-10 w-20 h-20 opacity-10">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="text-green-800">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="text-[#005550]">
             <path d="M451.9 142.5l-46.5-46.5c-8-8-20.9-8-28.9 0L306.7 166c-11.3-5.9-24.1-9-37.7-9-46.1 0-83.4 37.4-83.4 83.4 0 12.9 2.9 25.1 8.1 36-8.5 9.4-16.3 17.3-23.5 24.5-5.4 5.4-14.4 5.4-19.8 0L32 182.7c-8-8-8-20.9 0-28.9l46.5-46.5c8-8 20.9-8 28.9 0l69.8 69.8c11.3-5.9 24.1-9 37.7-9 46.1 0 83.4 37.4 83.4 83.4 0 12.9-2.9 25.1-8.1 36 8.5 9.4 16.3 17.3 23.5 24.5 5.4 5.4 14.4 5.4 19.8 0L452 182.7c8-8 8-20.9 0-28.9l-69.8-69.8c11.3-5.9 24.1-9 37.7-9 5.5 0 10 4.5 10 10s-4.5 10-10 10c-30.3 0-54.9 24.6-54.9 54.9 0 5.5-4.5 10-10 10s-10-4.5-10-10c0-30.3-24.6-54.9-54.9-54.9-5.5 0-10-4.5-10-10s4.5-10 10-10c13.6 0 26.3 3.1 37.7 9l35.7-35.7c-1.9-1.9-1.9-5.1 0-7.1 1.9-1.9 5.1-1.9 7.1 0l30.6 30.6c1.9 1.9 1.9 5.1 0 7.1l-30.6 30.6c-1.9 1.9-5.1 1.9-7.1 0-1.9-1.9-1.9-5.1 0-7.1L451.9 142.5z"/>
           </svg>
         </div>
 
         {/* 装饰性玩具元素 - 玩具熊 */}
         <div className="absolute bottom-10 right-10 w-24 h-24 opacity-10">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" className="text-green-800">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" className="text-[#005550]">
             <path d="M464 144c-13.3 0-26.1 2.5-37.9 7.1C415.2 84.6 358.8 32 288 32c-70.8 0-127.2 52.6-138.1 119.1C138.1 146.5 125.3 144 112 144c-61.9 0-112 50.1-112 112s50.1 112 112 112h16v50.2c18.8 14.8 40.4 25.6 64 32V400h16c22.1 0 40-17.9 40-40v-24h128v24c0 22.1 17.9 40 40 40h16v50.2c23.6-6.4 45.2-17.3 64-32V368h16c61.9 0 112-50.1 112-112s-50.1-112-112-112zm-80 256h-16v-24c0-22.1-17.9-40-40-40H248c-22.1 0-40 17.9-40 40v24h-16c-39.7 0-72-32.3-72-72V192h13.9C166.7 232 222.2 256 288 256s121.3-24 140.1-64H432v136c0 39.7-32.3 72-72 72zM288 64c42 0 78.7 21.9 100.7 54.7-20.6 12.3-36.8 31.5-45.8 55.2-15.5 6-32.3 9.1-49.9 9.1s-34.4-3.1-49.9-9.1c-9.1-23.7-25.3-42.9-45.8-55.2C219.3 85.9 246 64 288 64zM144 144c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16zm288 0c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16z"/>
           </svg>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 relative">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">探索产品分类</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">产品大全</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               我们提供多种类型的玩具产品，满足不同年龄段孩子的需求和兴趣。
             </p>
             
             {/* 装饰性玩具元素 - 标题装饰 */}
             <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-24 h-6 opacity-20">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="text-green-800">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="text-[#005550]">
                 <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200z"/>
                 <path d="M256 288c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32z"/>
                 <path d="M256 128c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32zm0 192c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z"/>
@@ -121,7 +121,7 @@ export default function Home() {
           <div className="text-center mt-10">
             <Link
               href="/products"
-              className="inline-block bg-green-800 hover:bg-green-900 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+              className="inline-block bg-[#005550] hover:bg-[#004540] text-white font-medium py-3 px-6 rounded-lg transition-colors"
             >
               查看全部分类
             </Link>
@@ -130,7 +130,7 @@ export default function Home() {
       </section>
 
       {/* 特色产品 */}
-      <section className="py-16 bg-gray-50 relative">
+      <section className="py-16 bg-[#f0f5f4] relative">
         {/* 装饰性玩具元素 - 建筑块 */}
         <div className="absolute top-10 right-20 w-16 h-16 opacity-10 rotate-12">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" className="text-yellow-600">
@@ -154,7 +154,7 @@ export default function Home() {
             
             {/* 装饰性玩具元素 - 标题装饰 */}
             <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-24 h-6 opacity-20">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" className="text-green-800">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" className="text-[#005550]">
                 <path d="M488 312.7V456c0 13.3-10.7 24-24 24H348c-6.6 0-12-5.4-12-12V356c0-6.6-5.4-12-12-12h-72c-6.6 0-12 5.4-12 12v112c0 6.6-5.4 12-12 12H112c-13.3 0-24-10.7-24-24V312.7c0-3.6 1.6-7 4.4-9.3l188-154.8c4.4-3.6 10.8-3.6 15.3 0l188 154.8c2.7 2.3 4.3 5.7 4.3 9.3zm83.6-60.9L488 182.9V44.4c0-6.6-5.4-12-12-12h-56c-6.6 0-12 5.4-12 12V117l-89.5-73.7c-17.7-14.6-43.3-14.6-61 0L4.4 251.8c-5.1 4.2-5.8 11.8-1.6 16.9l25.5 31c4.2 5.1 11.8 5.8 16.9 1.6l235.2-193.7c4.4-3.6 10.8-3.6 15.3 0l235.2 193.7c5.1 4.2 12.7 3.5 16.9-1.6l25.5-31c4.2-5.2 3.4-12.7-1.7-16.9z"/>
               </svg>
             </div>
@@ -163,7 +163,7 @@ export default function Home() {
           <div className="text-center mt-10">
             <Link
               href="/products"
-              className="inline-block bg-green-800 hover:bg-green-900 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+              className="inline-block bg-[#005550] hover:bg-[#004540] text-white font-medium py-3 px-6 rounded-lg transition-colors"
             >
               查看更多产品
             </Link>
@@ -196,7 +196,7 @@ export default function Home() {
             
             {/* 装饰性玩具元素 - 标题装饰 */}
             <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-20 h-6 opacity-20">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="text-green-800">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="text-[#005550]">
                 <path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"/>
               </svg>
             </div>
@@ -206,10 +206,10 @@ export default function Home() {
       </section>
       
       {/* 为什么选择我们 */}
-      <section className="py-16 bg-green-50 relative">
+      <section className="py-16 bg-[#f0f5f4] relative">
         {/* 装饰性玩具元素 - 风车 */}
         <div className="absolute top-10 right-10 w-20 h-20 opacity-10 animate-spin" style={{animationDuration: '15s'}}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="text-green-800">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="text-[#005550]">
             <path d="M288 167.2v-28.1c-28.2-36.3-47.1-79.3-54.1-125.2-2.1-13.5-19-18.8-27.8-8.3-21.1 24.9-37.7 54.1-48.9 86.5 34.2 38.3 80 64.5 130.8 75.1zM400 64c-44.2 0-80 35.9-80 80.1v59.4C215.6 197.3 127 133 87 41.8c-5.5-12.5-23.2-13.2-29-.9C41.4 76 32 115.2 32 156.6c0 70.8 34.1 136.9 85.1 185.9 13.2 12.7 26.1 23.2 38.9 32.8l-143.9 36C1.4 414-3.4 426.4 2.6 435.7 20 462.6 63 508.2 155.8 512c8 .3 16-2.6 22.1-7.9l65.2-56.1H320c88.4 0 160-71.5 160-159.9V128l32-64H400zm0 96.1c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16z"/>
           </svg>
         </div>
@@ -230,7 +230,7 @@ export default function Home() {
             
             {/* 装饰性玩具元素 - 标题装饰 */}
             <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-24 h-6 opacity-20">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="text-green-800">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="text-[#005550]">
                 <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/>
               </svg>
             </div>
@@ -277,8 +277,8 @@ export default function Home() {
             
             <div className="bg-white p-6 rounded-xl shadow-md relative">
               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-green-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                <svg className="w-6 h-6 text-[#005550]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">品质保证</h3>
@@ -288,7 +288,7 @@ export default function Home() {
 
               {/* 装饰性小元素 */}
               <div className="absolute top-2 right-2 w-8 h-8 opacity-10">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" className="text-green-800">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" className="text-[#005550]">
                   <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/>
                 </svg>
               </div>

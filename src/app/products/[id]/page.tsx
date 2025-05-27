@@ -264,7 +264,6 @@ export default function ProductDetailPage() {
             </span>
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>
-          <p className="text-xl font-semibold text-green-800 mb-4">¥{product.price}</p>
           <p className="text-gray-600 mb-6">{product.longDescription}</p>
           
           {/* 装饰性玩具元素 - 右上角 */}
@@ -326,25 +325,11 @@ export default function ProductDetailPage() {
           
           {/* 加入购物车 */}
           <div className="flex items-center mb-6">
-            <div className="flex items-center border border-gray-300 rounded-md mr-4">
-              <button
-                className="px-3 py-1 text-gray-500 hover:text-gray-700 focus:outline-none"
-                onClick={() => setQuantity(Math.max(1, quantity - 1))}
-              >
-                -
-              </button>
-              <span className="px-3 py-1 text-gray-800">{quantity}</span>
-              <button
-                className="px-3 py-1 text-gray-500 hover:text-gray-700 focus:outline-none"
-                onClick={() => setQuantity(quantity + 1)}
-              >
-                +
-              </button>
-            </div>
+            
             <button
               className="bg-green-800 hover:bg-green-900 text-white font-medium py-2 px-6 rounded-lg transition-colors flex-grow md:flex-grow-0"
             >
-              加入购物车
+              加入心愿单
             </button>
           </div>
           
@@ -431,7 +416,6 @@ export default function ProductDetailPage() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">{relatedProduct.name}</h3>
                 <p className="text-gray-600 text-sm mb-2">{relatedProduct.description}</p>
-                <p className="text-green-800 font-medium">¥{relatedProduct.price}</p>
               </div>
             </Link>
           ))}
