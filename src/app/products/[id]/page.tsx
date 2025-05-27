@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+// import { useState } from 'react';
 import Link from 'next/link';
 // import Image from 'next/image';
 import { useParams } from 'next/navigation';
@@ -134,7 +134,7 @@ export default function ProductDetailPage() {
   const productId = Number(params.id);
   
   const product = productsData.find(p => p.id === productId);
-  const [quantity, setQuantity] = useState(1);
+  // const [quantity, setQuantity] = useState(1);
   
   if (!product) {
     return (
