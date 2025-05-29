@@ -7,7 +7,6 @@ import Testimonials from "@/components/Testimonials";
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* 英雄区域 */}
       <section className="relative bg-[#f0f5f4] overflow-hidden">
         {/* 装饰性玩具元素 - 左上角 */}
         <div className="absolute -top-6 -left-6 w-24 h-24 rotate-12 opacity-20">
