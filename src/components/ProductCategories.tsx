@@ -9,21 +9,21 @@ const categories = [
     name: "益智玩具",
     description: "促进智力发展的各类玩具",
     image: "/images/test001.jpg",
-    href: "/products"
+    href: "/products/list"
   },
   {
     id: 2,
     name: "拼装积木",
     description: "锻炼创造力和空间想象力",
     image: "/images/test002.jpg",
-    href: "/products"
+    href: "/products/list"
   },
   {
     id: 3,
     name: "户外玩具",
     description: "适合户外活动的各类玩具",
     image: "/images/test003.jpg",
-    href: "/products"
+    href: "/products/list"
   },
   {
     id: 4,
@@ -37,14 +37,14 @@ const categories = [
     name: "遥控玩具",
     description: "丰富多彩的遥控玩具系列",
     image: "/images/test005.jpg",
-    href: "/products"
+    href: "/products/list"
   },
   {
     id: 6,
     name: "婴幼儿玩具",
     description: "专为0-3岁宝宝设计的玩具",
     image: "/images/test006.jpg",
-    href: "/products"
+    href: "/products/list"
   }
 ];
 

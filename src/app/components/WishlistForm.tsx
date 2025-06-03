@@ -1,7 +1,7 @@
 import { useState } from "react";
-
+import Image from "next/image";
 interface WishlistFormProps {
-  product: {
+  product?: {
     name: string;
   };
 }
@@ -24,27 +24,41 @@ export default function WishlistForm({ product }: WishlistFormProps) {
     <div>
       <button
         onClick={() => setIsWishlistFormOpen(true)}
-        className="w-full sm:w-auto bg-green-800 cursor-pointer hover:bg-green-900 text-white font-medium py-3 px-8 rounded-lg transition-colors flex items-center justify-center"
+        className="w-full bg-green-800 cursor-pointer text-white font-medium transition-colors flex items-center justify-center rounded-full p-4 shadow-lg text-white"
       >
         <svg
-          className="w-5 h-5 mr-2"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+          className="w-5 h-5 text-white"
+          id="katman_1"
+          viewBox="0 0 236 216.39"
+          fill="currentColor"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-          ></path>
+          <g>
+            <path
+              fill="currentColor"
+              d="M230.3,43.4c-4.9-5.9-12.5-9.3-20.8-9.3H38.1l-0.3-1.5c-1.7-9.4-4.2-16.2-7.8-21.4C25,3.9,17.4,0,8.3,0C3.7,0,0,3.7,0,8.3
+		s3.7,8.3,8.3,8.3c4.7,0,10,1.5,13.2,18.9l20.8,113.7c1.2,6.4,5.4,12.2,11.8,16.4c5.8,3.7,13,5.8,20.1,5.8H209
+		c4.6,0,8.3-3.7,8.3-8.3s-3.7-8.3-8.3-8.3H74.2c-8,0-14.9-4.5-15.6-8.5l-0.1-0.5h135.1c5.8,0,11.7-1.7,16.4-4.8
+		c5.2-3.4,8.7-8.3,9.8-13.6l15.7-63.1l0.1-0.3v-0.3C236.9,56.4,235,48.9,230.3,43.4z M219.3,60.6l-15.7,63.1l-0.1,0.3v0.3
+		c-0.3,1.8-4.3,5-9.9,5H55.5L41.1,50.7h168.4c3.4,0,6.2,1.2,8,3.3C219.1,55.8,219.7,58.1,219.3,60.6L219.3,60.6z"
+            />
+            <path
+              fill="currentColor"
+              d="M165.8,213.7c9.6,5.5,21.8,2.3,27.4-7.3c5.5-9.6,2.3-21.8-7.3-27.4l0,0c-9.6-5.5-21.8-2.3-27.4,7.3
+		C152.9,195.9,156.2,208.1,165.8,213.7L165.8,213.7z"
+            />
+            <path
+              fill="currentColor"
+              d="M81.4,213.7c9.6,5.5,21.8,2.3,27.4-7.3c5.5-9.6,2.3-21.8-7.3-27.4l0,0c-9.6-5.5-21.8-2.3-27.4,7.3S71.8,208.1,81.4,213.7
+		L81.4,213.7z"
+            />
+          </g>
         </svg>
-        加入心愿单
       </button>
       {isWishlistFormOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center" style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" 
-
-        }}>
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+        >
           <div className="bg-white rounded-lg p-8 max-w-md w-full mx-4">
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-xl font-bold text-gray-900">添加到心愿单</h3>
@@ -74,7 +88,7 @@ export default function WishlistForm({ product }: WishlistFormProps) {
                 </label>
                 <input
                   type="text"
-                  value={product.name}
+                  value={product?.name}
                   disabled
                   className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50"
                 />

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import WishlistForm from '@/app/components/WishlistForm';
 
 // 产品类型定义
 interface Product {
@@ -20,7 +21,7 @@ const productsData: Product[] = [
     name: "儿童活动区设计方案",
     description: "专业的儿童活动区整体环境设计解决方案",
     category: "环境设计",
-    image: "/images/test001.jpg"
+    image: "/images/888.jpg"
   },
   {
     id: 2,
@@ -74,7 +75,7 @@ export default function ProductListPage() {
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* 页面标题 */}
-        <div className="mb-12">
+        <div className="mb-3">
           <div className="flex items-center gap-4 mb-6">
             <Link 
               href="/products" 
@@ -83,7 +84,7 @@ export default function ProductListPage() {
               <svg className="w-6 h-6 mr-2 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">返回产品中心</span>
+              <span className="font-medium">返回服务中心</span>
             </Link>
           </div>
           <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
@@ -92,20 +93,10 @@ export default function ProductListPage() {
         </div>
 
         {/* 分类筛选 */}
-        <div className="bg-white rounded-2xl shadow-lg mb-12 overflow-hidden">
+        <div className="bg-white rounded-2xl shadow-lg mb-6 overflow-hidden">
           <div className="p-6 md:p-8">
             <h2 className="text-lg font-semibold text-gray-900 mb-4">按分类浏览</h2>
             <div className="flex flex-wrap gap-3">
-              <button
-                onClick={() => setSelectedCategory('')}
-                className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                  selectedCategory === ''
-                    ? 'bg-green-800 text-white shadow-lg shadow-green-800/30 transform -translate-y-0.5'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow'
-                }`}
-              >
-                全部
-              </button>
               {categories.map((category) => (
                 <button
                   key={category}
@@ -124,43 +115,26 @@ export default function ProductListPage() {
         </div>
 
         {/* 产品列表 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="text-center gap-4 grid grid-cols-1">
           {filteredProducts.map(product => (
-            <Link 
-              key={product.id} 
-              href={`/products/${product.id}`}
+            <div 
+              key={product.id}              
               className="group bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
             >
-              <div className="relative w-full aspect-[4/3] overflow-hidden">
-                <Image
+              <div className="relative">
+                <img
                   src={product.image}
                   alt={product.name}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  priority
+                  width="100%"
                 />
-              </div>
-              <div className="p-6">
-                <div className="flex items-start justify-between mb-3">
-                  <span className="inline-flex px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
-                    {product.category}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-green-800 transition-colors duration-300">
-                  {product.name}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {product.description}
-                </p>
-                <div className="mt-4 flex items-center text-green-800 font-medium opacity-0 transform translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                  查看详情
-                  <svg className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                {/* 加入心愿单按钮 */}
+                <button className="absolute top-2 right-2 bg-green-800 rounded-full p-2 shadow-lg hover:bg-green-700 transition-colors">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
-                </div>
+                </button>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
 
@@ -185,6 +159,13 @@ export default function ProductListPage() {
           </div>
         )}
       </div>
+
+      {/* 固定定位的一个购物车 在页面右下角 */}
+      <div className="fixed bottom-0 right-0 m-4">
+        <WishlistForm />
+      </div>
+
+    
     </div>
   );
 } 

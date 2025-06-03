@@ -15,7 +15,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: '首页', path: '/' },
-    { name: '产品中心', path: '/products' },
+    { name: '服务中心', path: '/products' },
     { name: '关于我们', path: '/about' },
     { name: '联系方式', path: '/contact' },
   ];

@@ -2,7 +2,6 @@
 import Link from "next/link";
 import FeaturedProducts from "@/components/FeaturedProducts";
 import ProductCategories from "@/components/ProductCategories";
-import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -32,12 +31,6 @@ export default function Home() {
               优优玩具提供各类高品质、安全、有趣的玩具产品，激发孩子的想象力和创造力，陪伴孩子健康成长。
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link 
-                href="/products" 
-                className="bg-[#005550] hover:bg-[#004540] text-white font-medium py-3 px-6 rounded-lg transition-colors"
-              >
-                浏览产品
-              </Link>
               <Link 
                 href="/about" 
                 className="bg-white hover:bg-gray-100 text-[#005550] font-medium py-3 px-6 rounded-lg border border-[#005550] transition-colors"
@@ -84,7 +77,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 产品分类 */}
+      {/* 服务中心 */}
       <section className="py-16 bg-white relative">
         {/* 装饰性玩具元素 - 拼图 */}
         <div className="absolute top-10 left-10 w-20 h-20 opacity-10">
@@ -102,7 +95,7 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 relative">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">产品大全</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">服务中心</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               我们提供多种类型的玩具产品，满足不同年龄段孩子的需求和兴趣。
             </p>
@@ -125,82 +118,6 @@ export default function Home() {
               查看全部分类
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* 特色产品 */}
-      <section className="py-16 bg-[#f0f5f4] relative">
-        {/* 装饰性玩具元素 - 建筑块 */}
-        <div className="absolute top-10 right-20 w-16 h-16 opacity-10 rotate-12">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" className="text-yellow-600">
-            <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-32 252c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92H92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/>
-          </svg>
-        </div>
-
-        {/* 装饰性玩具元素 - 旋转木马 */}
-        <div className="absolute bottom-10 left-10 w-20 h-20 opacity-10">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" className="text-red-500">
-            <path d="M288 0c-11.7 0-21.3 9.6-21.3 21.3v32h-69.3c-11.7 0-21.3 9.6-21.3 21.3s9.6 21.3 21.3 21.3H416c11.7 0 21.3-9.6 21.3-21.3s-9.6-21.3-21.3-21.3h-69.3v-32C346.7 9.6 337.1 0 325.3 0H288zm85.3 128H202.7c-11.7 0-21.3 9.6-21.3 21.3 0 38.6 16.9 72.9 43.7 96H164c-19.1 0-32 18.9-32 32v64c0 17.7 14.3 32 32 32h248c17.7 0 32-14.3 32-32v-64c0-13.1-12.9-32-32-32h-61.1c26.8-23.1 43.7-57.4 43.7-96 0-11.7-9.6-21.3-21.3-21.3zM160 352h256v32H160v-32z"/>
-          </svg>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 relative">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">特色产品</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              精选优质玩具产品，让孩子享受快乐的同时，促进能力发展。
-            </p>
-            
-            {/* 装饰性玩具元素 - 标题装饰 */}
-            <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-24 h-6 opacity-20">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" className="text-[#005550]">
-                <path d="M488 312.7V456c0 13.3-10.7 24-24 24H348c-6.6 0-12-5.4-12-12V356c0-6.6-5.4-12-12-12h-72c-6.6 0-12 5.4-12 12v112c0 6.6-5.4 12-12 12H112c-13.3 0-24-10.7-24-24V312.7c0-3.6 1.6-7 4.4-9.3l188-154.8c4.4-3.6 10.8-3.6 15.3 0l188 154.8c2.7 2.3 4.3 5.7 4.3 9.3zm83.6-60.9L488 182.9V44.4c0-6.6-5.4-12-12-12h-56c-6.6 0-12 5.4-12 12V117l-89.5-73.7c-17.7-14.6-43.3-14.6-61 0L4.4 251.8c-5.1 4.2-5.8 11.8-1.6 16.9l25.5 31c4.2 5.1 11.8 5.8 16.9 1.6l235.2-193.7c4.4-3.6 10.8-3.6 15.3 0l235.2 193.7c5.1 4.2 12.7 3.5 16.9-1.6l25.5-31c4.2-5.2 3.4-12.7-1.7-16.9z"/>
-              </svg>
-            </div>
-          </div>
-          <FeaturedProducts />
-          <div className="text-center mt-10">
-            <Link
-              href="/products"
-              className="inline-block bg-[#005550] hover:bg-[#004540] text-white font-medium py-3 px-6 rounded-lg transition-colors"
-            >
-              查看更多产品
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 客户评价 */}
-      <section className="py-16 bg-white relative">
-        {/* 装饰性玩具元素 - 玩具小车 */}
-        <div className="absolute top-20 left-10 w-16 h-16 opacity-10 transform -rotate-12">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="currentColor" className="text-blue-500">
-            <path d="M544 192h-16L419.22 56.02A64.025 64.025 0 0 0 369.24 32H155.33c-26.17 0-49.7 15.93-59.42 40.23L48 194.26C20.44 201.4 0 226.21 0 256v112c0 8.84 7.16 16 16 16h48c0 53.02 42.98 96 96 96s96-42.98 96-96h128c0 53.02 42.98 96 96 96s96-42.98 96-96h48c8.84 0 16-7.16 16-16v-80c0-53.02-42.98-96-96-96zM160 432c-26.47 0-48-21.53-48-48s21.53-48 48-48 48 21.53 48 48-21.53 48-48 48zm230.4-254.87c-8-24.75-29.77-41.13-55.69-41.13h-78.54l13.37-40.12A16.003 16.003 0 0 1 284.18 80h85.05c9.97 0 18.82 4.91 24.22 12.42L433.82 176H345.6l44.8 1.13zM480 432c-26.47 0-48-21.53-48-48s21.53-48 48-48 48 21.53 48 48-21.53 48-48 48z"/>
-          </svg>
-        </div>
-
-        {/* 装饰性玩具元素 - 星星 */}
-        <div className="absolute bottom-10 right-10 w-20 h-20 opacity-10">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" className="text-yellow-500">
-            <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/>
-          </svg>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 relative">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">客户评价</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              听听我们的客户怎么说，他们的孩子如何喜欢我们的产品。
-            </p>
-            
-            {/* 装饰性玩具元素 - 标题装饰 */}
-            <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-20 h-6 opacity-20">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="text-[#005550]">
-                <path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"/>
-              </svg>
-            </div>
-          </div>
-          <Testimonials />
         </div>
       </section>
       

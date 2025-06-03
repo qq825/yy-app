@@ -24,7 +24,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link href="/products" className="text-gray-300 hover:text-white">
-                  产品中心
+                  服务中心
                 </Link>
               </li>
               <li>
