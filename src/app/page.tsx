@@ -1,6 +1,5 @@
 // import Image from "next/image";
 import Link from "next/link";
-import FeaturedProducts from "@/components/FeaturedProducts";
 import ProductCategories from "@/components/ProductCategories";
 
 export default function Home() {

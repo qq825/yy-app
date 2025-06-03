@@ -2,45 +2,6 @@
 
 import ProductCategories from '@/components/ProductCategories';
 
-// 分类数据
-const categories = [
-  {
-    id: "env-design",
-    name: "环境设计",
-    description: "专业的儿童活动场所整体环境设计",
-    image: "/images/test001.jpg"
-  },
-  {
-    id: "indoor",
-    name: "室内装备",
-    description: "优质的室内活动器材与设施",
-    image: "/images/test002.jpg"
-  },
-  {
-    id: "outdoor",
-    name: "户外游戏",
-    description: "丰富的户外游戏设施设备",
-    image: "/images/test003.jpg"
-  },
-  {
-    id: "sports",
-    name: "运动材料",
-    description: "专业的儿童运动训练器材",
-    image: "/images/test004.jpg"
-  },
-  {
-    id: "baby",
-    name: "0-3托育",
-    description: "婴幼儿托育服务场所设备",
-    image: "/images/test005.jpg"
-  },
-  {
-    id: "custom",
-    name: "非标定制",
-    description: "个性化定制游戏场地设施",
-    image: "/images/test006.jpg"
-  }
-];
 
 export default function ProductsPage() {
   return (
